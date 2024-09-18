@@ -8,9 +8,9 @@ const HOST = config.server.host;
 const PORT = config.server.port;
 const logger = loggerInstance();
 
-const server = new grpc.Server();
-server.addService(GreeterService, GreeterController);
-server.bindAsync(`${HOST}:${PORT}`, grpc.ServerCredentials.createInsecure(),
+const index = new grpc.Server();
+index.addService(GreeterService, GreeterController);
+index.bindAsync(`${HOST}:${PORT}`, grpc.ServerCredentials.createInsecure(),
   (err, port) => {
     if (err) {
       logger.error('Ошибка: ', err.message);

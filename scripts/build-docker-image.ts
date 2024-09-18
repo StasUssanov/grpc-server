@@ -4,7 +4,7 @@ import { loggerInstance } from '../src/shared/logger';
 
 const logger = loggerInstance('BUILD DOCKER IMAGE');
 
-const GROUP = '';
+const GROUP = 'test';
 const LOGIN = '';
 const TOKEN = '';
 
